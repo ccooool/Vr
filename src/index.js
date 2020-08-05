@@ -20,14 +20,26 @@ class App extends React.Component {
     });
   }
 
+  handleClick() {
+    console.log("hello world");
+  }
+
   render () {
     return (
       <Scene>
-        <Entity environment="preset: egypt; groundColor: #445; grid: cross"/>
-
+        <Entity environment="preset: forest; groundColor: #445"/>
         <Entity primitive="a-camera">
           <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
-        </Entity> 
+        </Entity>
+
+        <Entity id="leftHand" oculus-touch-controls="hand: left" haptics="dur: 40">
+          <Entity primitive='a-sphere' color="green"/>
+        </Entity>
+        <Entity id="rightHand" oculus-touch-controls="hand: right" haptics="dur: 40"></Entity>
+
+
+
+
 
         <Entity id="box"
           geometry={{primitive: 'box'}}
