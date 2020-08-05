@@ -32,10 +32,12 @@ class App extends React.Component {
           <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
         </Entity>
 
-        <Entity id="leftHand" oculus-touch-controls="hand: left" haptics="dur: 40">
-          <Entity primitive='a-sphere' color="green"/>
+        <Entity id="leftHand" oculus-touch-controls="hand: left" haptics="dur: 10">
+          <Entity primitive='a-sphere' color="red"/>
         </Entity>
-        <Entity id="rightHand" oculus-touch-controls="hand: right" haptics="dur: 40"></Entity>
+        <Entity id="rightHand" oculus-touch-controls="hand: right" haptics="dur: 10">
+          <Entity primitive='a-sphere'  color= "blue"/>
+        </Entity>
 
 
 
